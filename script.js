@@ -2,11 +2,20 @@ const validation = {
   minLength: {
     length: 2,
     errorMessage: `At least ${this.length} characters`,
-    validate: (text) => text.length >= 2,
+    validate: function (text) {
+      return text.length >= this.length;
+    },
   },
   notEmpty: {
     errorMessage: `A value is required`,
     validate: (text) => text && text !== "",
+  },
+  minValue: {
+    value: 1,
+    errorMessage: `Value is less than ${this.value}`,
+    validate: function (value) {
+      return value >= this.value;
+    },
   },
 };
 
