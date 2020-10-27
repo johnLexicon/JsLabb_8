@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Labb 13</title>
+</head>
+<body>
+    <form action="">
+        <div class="formGroup">
+            <label for="fname">First name</label>
+            <input data-validators="minLength notEmpty" id="fname" class="text" type="text">
+            <div class="fname-error"></div>
+        </div>
+        <div class="formGroup">
+            <label for="lname">Last Name</label>
+            <input data-validators="minLength notEmpty" id="lname" class="text" type="text">
+            <div class="lname-error"></div>
+        </div>
+        <button>Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

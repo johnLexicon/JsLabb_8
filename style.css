@@ -1,0 +1,7 @@
+.text {
+  outline: none;
+}
+
+.error {
+  border-color: red;
+}
