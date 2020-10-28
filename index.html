@@ -10,17 +10,17 @@
     <form action="">
         <div class="formGroup">
             <label for="fname">First name</label>
-            <input data-validators="minLength notEmpty" id="fname" class="text" type="text">
+            <input data-validators="minLength notEmpty" id="fname" type="text">
             <div class="fname-error"></div>
         </div>
         <div class="formGroup">
             <label for="lname">Last Name</label>
-            <input data-validators="minLength notEmpty" id="lname" class="text" type="text">
+            <input data-validators="minLength notEmpty" id="lname" type="text">
             <div class="lname-error"></div>
         </div>
         <div class="formGroup">
             <label for="age">Age</label>
-            <input type="number" class="number">
+            <input data-validators="minValue" type="number">
             <div class="age-error"></div>
         </div>
         <button>Submit</button>

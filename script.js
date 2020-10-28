@@ -1,7 +1,7 @@
 const validation = {
   minLength: {
     length: 2,
-    errorMessage: `At least ${this.length} characters`,
+    errorMessage: `To few characters`,
     validate: function (text) {
       return text.length >= this.length;
     },
@@ -12,7 +12,7 @@ const validation = {
   },
   minValue: {
     value: 1,
-    errorMessage: `Value is less than ${this.value}`,
+    errorMessage: `Value is to low`,
     validate: function (value) {
       return value >= this.value;
     },
@@ -72,9 +72,10 @@ function submitForm(e) {
 
 function main() {
   document.querySelector("form").addEventListener("submit", submitForm);
-  document.querySelectorAll(".text").forEach((elem) => {
+  document.querySelectorAll("input").forEach((elem) => {
     elem.addEventListener("keyup", (e) => validatorHandler(e.target));
   });
+  document.querySelector("input[type=number]").addEventListener("change", (e) => validatorHandler(e.target));
 }
 
 main();
