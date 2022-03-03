@@ -1,7 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400;700&display=swap');
+
+:root {
+  --yellow: #fed614;
+  --gray: #383838;
+  --gray-muted: #38383860;
+  --select-border: #383838;
+  --select-focus: #101484;
+  --select-arrow: var(--select-border);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Yantramanav, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: auto;
+  gap: 2rem;
+}
+
+#section1 {
+  background-color: var(--yellow);
+  border-bottom-right-radius: 32px;
+  min-width: 340px;
+}
+
+#section1 > * {
+  margin: 0 1rem;
+}
+
+#section1 .brand {
+  font-size: 4rem;
+  color: #d60000;
+}
+
+.content h2,
+.content p {
+  margin-bottom: 0.8rem;
+}
+
+.content .small {
+  color: var(--gray-muted);
+  font-size: small;
+}
+
+#section2 {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: start;
+}
+
+#section2 > * {
+  margin-left: 1rem;
+}
+
+.brand {
+  padding: 2rem 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+}
+
+.formGroup {
+  color: var(--gray-muted);
+  padding: 1rem 0;
+}
+
+.formGroup label {
+  display: block;
+}
+
+.formGroup input[type='checkbox'] + label {
+  display: inline;
+}
+
 input {
+  padding: 0.3rem 0;
+}
+
+input[type='text'],
+input[type='email'] {
+  border: none;
   outline: none;
+  border-bottom: 1px solid var(--gray-muted);
+  width: 75%;
+  max-width: 600px;
+}
+
+::placeholder {
+  color: var(--gray-muted);
 }
 
 .error {
   border-color: red;
+}
+
+.btn {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  color: var(--gray);
+  background-color: transparent;
+  width: 20rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--yellow);
+}
+
+select {
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 0.5px dashed var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+
+@media screen and (min-width: 1220px) {
+  .grid-container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    gap: 3rem;
+  }
+  #section1 {
+    border-radius: 0;
+    border-top-right-radius: 30px;
+  }
+
+  #section1 .content {
+    margin-top: 3rem;
+  }
+
+  #section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
 }

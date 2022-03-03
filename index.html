@@ -9,34 +9,53 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Register</h1>
-        <form action="">
-            <div class="formGroup">
-                <label for="fname">Full name</label>
-                <input data-validators="minLength notEmpty" id="fname" type="text">
-                <div class="fname-error"></div>
+    <div class="grid-container">
+        <section id="section1">
+            <header>
+                <div class="brand">
+                    <div>L</div>
+                </div>
+            </header>
+            <div class="content">
+                <h2>Welcome</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam perferendis in quos quisquam
+                    temporibus pariatur, possimus cupiditate dolorum tenetur reprehenderit, veniam dolore nulla.
+                </p>
+                <p class="small">
+                    Lorem ipsum dolor sit amet.
+                </p>
             </div>
-            <div class="formGroup">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <div class="email-error"></div>
-            </div>
-            <div class="formGroup">
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender">
-                    <option disabled value=""></option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="formGroup">
-                <input type="checkbox" name="terms" id="terms">
-                <label for="terms">I Agree to the terms and conditions</label>
-            </div>
-            <button type="button" class="btn btn-primary">Submit</button>
-        </form>
+        </section>
+        <section id="section2">
+            <h1>Register</h1>
+            <form novalidate>
+                <div class="formGroup">
+                    <label for="fname">Full name</label>
+                    <input id="fname" type="text" placeholder="John Doe">
+                    <div class="fname-error"></div>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com">
+                    <div class="email-error"></div>
+                </div>
+                <div class="formGroup">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option disabled selected value=""></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="formGroup">
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">I Agree to the terms and conditions</label>
+                </div>
+                <div class="formGroup"><button type="button" class="btn btn-primary">Submit</button></div>
+            </form>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>
