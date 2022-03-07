@@ -145,6 +145,15 @@ select {
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
 }
 
+.invalid {
+  display: block;
+  color: #d60000;
+}
+
+.d-none {
+  display: none;
+}
+
 @media screen and (min-width: 1220px) {
   .grid-container {
     grid-template-columns: 1fr 2fr;
