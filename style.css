@@ -7,6 +7,7 @@
   --select-border: #383838;
   --select-focus: #101484;
   --select-arrow: var(--select-border);
+  --letter-icon-url: url('/images/letter.svg');
 }
 
 * {
@@ -101,13 +102,24 @@ input {
   padding: 0.3rem 0;
 }
 
+.input-wrapper {
+  border-bottom: 1px solid var(--gray-muted);
+  width: 75%;
+  max-width: 600px;
+  padding-right: 3rem;
+}
+
+#emailWrapper::after {
+  content: var(--letter-icon-url);
+  position: absolute;
+  padding: 0 10px;
+}
+
 input[type='text'],
 input[type='email'] {
   border: none;
   outline: none;
-  border-bottom: 1px solid var(--gray-muted);
-  width: 75%;
-  max-width: 600px;
+  width: 100%;
 }
 
 ::placeholder {

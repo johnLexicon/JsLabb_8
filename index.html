@@ -32,12 +32,16 @@
             <form id="registerForm" novalidate>
                 <div class="formGroup">
                     <label for="fname">Full name</label>
-                    <input id="fname" name="fname" type="text" placeholder="John Doe">
+                    <div class="input-wrapper">
+                        <input id="fname" name="fname" type="text" placeholder="John Doe">
+                    </div>
                     <div id="fname-error"></div>
                 </div>
                 <div class="formGroup">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="example@email.com">
+                    <div id="emailWrapper" class="input-wrapper">
+                        <input type="email" name="email" id="email" placeholder="example@email.com">
+                    </div>
                     <div id="email-error"></div>
                 </div>
                 <div class="formGroup">
